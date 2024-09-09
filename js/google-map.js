@@ -9,7 +9,7 @@ function init() {
     // 39.399872
     // -8.224454
     
-    var mapOptions = {
+    var mapOptions = {  
         // How zoomed in you want the map to start at (always required)
         zoom: 7,
 
@@ -46,7 +46,7 @@ function init() {
     var addresses = ['New York'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.380987081709!2d112.78381858883947!3d-7.311025801727391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb0015c1bee7%3A0xce8d6e0ef41148c!2sRuang%20Multimedia%20Bisnis!5e0!3m2!1sid!2sid!4v1725508671951!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'+addresses[x]+'&sensor=false', null, function (data) {
+        $.getJSON('ttps://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'+addresses[x]+'&sensor=false', null, function (data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({
